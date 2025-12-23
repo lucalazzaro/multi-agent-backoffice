@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multi-Agent Backoffice: Why Humans Still Matter
 
-## Getting Started
+A comic-style simulation that shows how **multi-agent AI systems can fail in realistic, non-obvious ways** — and why **human accountability still matters**.
 
-First, run the development server:
+This project is not about making agents smarter.  
+It’s about making **failure modes visible**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 What this demo shows
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+In this simulated MedTech backoffice:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Each AI agent makes **locally reasonable decisions**
+- Together, they **collide**:
+  - growth vs capacity
+  - discounts vs cash
+  - urgency vs clinical compliance
+- Rules block unsafe actions
+- A human (CEO) must step in and take responsibility
 
-## Learn More
+No magic. No hype. Just trade-offs.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎭 Why a comic-style UI?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Because dashboards hide problems.
 
-## Deploy on Vercel
+This demo uses:
+- LEGO-style avatars
+- short dialogues
+- visual “collisions”
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+to make it immediately clear:
+- **who wants what**
+- **why it conflicts**
+- **where AI stops and humans decide**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧩 Core concepts
+
+### Agents
+Marketing, Sales, Accounting, Clinical, Operations, Customer Success  
+Each agent returns structured output with:
+- proposal
+- confidence
+- evidence
+- assumptions
+
+### Conflict Detector
+Detects when “good ideas” clash:
+- more leads while support is overloaded
+- discounts during risky moments
+- high confidence with weak evidence
+
+### Policy Gate
+Hard rules that **cannot be bypassed**:
+- clinical compliance
+- discount caps
+
+When rules are violated → **STOP**
+
+### Human Sign-off
+The system does not “decide”.
+A human must:
+- own the decision
+- explain the trade-off
+- accept responsibility
+
+---
+
+## 🧪 Two situations, very similar text — very different outcomes
+
+- **Situation A**: backlog is high
+- **Situation B**: VIP doctors push for a clinical shortcut
+
+Small wording change.  
+Big consequences.
+
+This highlights **brittleness** and overconfidence in AI-driven workflows.
+
+---
+
+## 🛠️ Tech stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Deterministic agent logic (no LLM required)
+- Deployed on Vercel
+
+---
+
+## 🚀 Live demo
+
+👉 **Live demo:** _(link coming from Vercel deployment)_  
+👉 **Code:** this repository
+
+---
+
+## ⚠️ What this is NOT
+
+- Not a replacement for humans
+- Not an autonomous decision-maker
+- Not a “trust the AI” story
+
+This is a **governance and accountability demo**.
+
+---
+
+## 👤 Author
+
+Built as part of a personal portfolio to explore:
+- multi-agent systems
+- AI governance
+- UX storytelling for complex systems
+
+---
+
+> *AI can suggest.  
+> Rules can block.  
+> Humans take responsibility.*
